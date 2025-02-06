@@ -12,10 +12,10 @@ from tempfile import NamedTemporaryFile
 from multiprocessing import Pool
 
 def get_dig_path():
-	cmd_result = shutil.which("python")
+	cmd_result = shutil.which("dig")
 	if cmd_result == None:
-		raise OSError(cmd_result.stderr)
-	return cmd_result.stdout.strip()
+		raise OSError("dig tool not found")
+	return cmd_result
 
 encoding = "utf-8"
 dig = get_dig_path()
