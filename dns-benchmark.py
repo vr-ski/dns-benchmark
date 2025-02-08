@@ -80,6 +80,8 @@ def main():
 	parser = ArgumentParser(description="Benchmark DNS query time.")
 	parser.add_argument("-n", "--count", type=int, default=1000,
 						help="The number of requests to make, 0 means no limit. Default is %(default)s.")
+	parser.add_argument("-b", "--base", type=str, default="https://downloads.majesticseo.com/", action="store_true",
+						help="Specify a URL to test against, instead of %(default)s.")
 	parser.add_argument("-s", "--dns", default="system", metavar="IP",
 						help="A comma-separated list of DNS server IP addresses. Default is %(default)s.")
 	parser.add_argument("-S", "--serial", default=False, action="store_true",
@@ -88,7 +90,7 @@ def main():
 
 	# Download Majestic Million csv.
 	majestic_million_csv = "majestic_million.csv"
-	base = "https://downloads.majesticseo.com/"
+	base = args.base
 	if not os.access(majestic_million_csv, os.R_OK):
 		urllib.request.urlretrieve(base + majestic_million_csv, majestic_million_csv)
 
