@@ -81,7 +81,7 @@ def main():
 	parser.add_argument("-n", "--count", type=int, default=1000,
 						help="The number of requests to make, 0 means no limit. Default is %(default)s.")
 	parser.add_argument("-b", "--base", type=str, default="https://downloads.majesticseo.com/", action="store_true",
-						help="Specify a URL to test against, instead of %(default)s.")
+						help="Specify a base URL (with list of addresses to test against) instead of %(default)s.")
 	parser.add_argument("-s", "--dns", default="system", metavar="IP",
 						help="A comma-separated list of DNS server IP addresses. Default is %(default)s.")
 	parser.add_argument("-S", "--serial", default=False, action="store_true",

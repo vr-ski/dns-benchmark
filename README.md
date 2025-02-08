@@ -19,8 +19,7 @@ optional arguments:
   -h, --help            show this help message and exit
   -n COUNT, --count COUNT
                         The number of requests to make, 0 means no limit. Default is 1000.
-  -d URL, --destination URL 
-                        Specify a URL to test against, instead of the default one.
+  -b URL, --base URL   Specify a base URL (with list of addresses to test against) instead of https://downloads.majesticseo.com/.
   -s IP, --dns IP       A comma-separated list of DNS server IP addresses. Default is system.
   -S, --serial          Don't query in parallel.
 ```
